@@ -45,43 +45,44 @@
         <div class="medium-8 columns">
             <h3><b>Question 1</b></h3>
             <label>
-                <h3>Do you enjoy traveling alone or with others?</h3>
+                <p class = "question1">Do you enjoy traveling alone or with others?</p>
                 <select>
+                <option value="">Select</option>
                   <option value="introvert" class = "ans1">Other people? No thank you. I like my peace and quiet.</option>
-                  <option value="extrovert" class = "ans1">Whats a party without friends?</option>
-                  <option value="extroverted-introvert" class = "ans1">I'll go with other people but prefer to keep to myself.</option>
+                  <option value="extrovert" class = "ans2">Whats a party without friends?</option>
+                  <option value="extroverted-introvert" class = "ans3">I'll go with other people but prefer to keep to myself.</option>
                 </select>
             </label>
         </div>
     </div>
     <!--Row 5-->
-    <div class="row">
+<!--     <div class="row">
         <div class="medium-8 columns">
             <h3><b>Question 2</b></h3>
             <label>
-                <h3>How would you describe your personality?</h3>
+                <p class = "question2">How would you describe your personality?</p>
                 <select>
-                  <option value="introvert" class = "ans2">Three syllabals my friend: In.tro.vert. I prefer to keep to myself and don't like talking to others.</option>
-                  <option value="extrovert" class = "ans2">Chatty kathy over here. I love people and making new friends!</option>
-                  <option value="extroverted-introvert" class = "ans2">I'm social if I'm with people I enjoy being around.</option>
+                  <option value="introvert">Three syllabals my friend: In.tro.vert. I prefer to keep to myself and don't like talking to others.</option>
+                  <option value="extrovert">Chatty kathy over here. I love people and making new friends!</option>
+                  <option value="extroverted-introvert">I'm social if I'm with people I enjoy being around.</option>
                 </select>
             </label>
         </div>
     </div>
     <!--Row 6-->
-    <div class="row">
+<!--     <div class="row">
         <div class="medium-8 columns">
             <h3><b>Question 3</b></h3>
             <label>
-                <h3>How often do you keep in touch with your friends?</h3>
+                <p class = "question3">How often do you keep in touch with your friends?</p>
                 <select>
-                  <option value="extrovert" class = "ans3">I prefer to text back and forth constantly.</option>
-                  <option value="introvert" class = "ans3">Friends? What are those. I'm a total loner.</option>
-                  <option value="extroverted-introvert" class = "ans3">I text or call if there's a need, but other than that, try not to get too hung up on it.</option>
+                  <option value="extrovert">I prefer to text back and forth constantly.</option>
+                  <option value="introvert">Friends? What are those. I'm a total loner.</option>
+                  <option value="extroverted-introvert">I text or call if there's a need, but other than that, try not to get too hung up on it.</option>
                 </select>
             </label>
         </div>
-    </div>
+    </div>  -->
      <div class="row">
     <div class="medium-4 columns"><a class="button secondary expanded submit" href="#">Submit</a></div>
   </div>
@@ -122,6 +123,7 @@ if user has exin, exin, exin match to ted (if exin if greater than one)
 if user has exin, exin, ex match to ted
 if user has exin, exin, in match to ted
 
+
 if user has ex, in, and in match match to sasha (if in is greater than one)
 if user has in, in, and in match to sasha
 if user has exin, in and in match to sasha
@@ -138,31 +140,58 @@ if user has exin, ex and ex match to sasha
         var newFriend = {
         name: $(".name").val().trim(),
         imagelink: $(".photo").val().trim(),
-        answerOne: $(".ans1").val().trim(),
-        answerTwo: $(".ans2").val().trim(),
-        answerThree: $(".ans3").val().trim(),
+        question1: $(".question1").val().trim(),
+        answer1 : $(".ans1").val().trim()
+        // question2: $(".question2").val().trim(),
+        // question3: $(".question3").val().trim(),
       };
-      // console.log(newFriend);
-      choosePersonality(newFriend);
+      console.log(newFriend);
+      // choosePersonality(newFriend);
+      if(newFriend.answer1 === "introvert"){
+        console.log("correct answer!")
+      }
+
+      else if (newfriend.answer1 === "extrovert"){
+        console.log("nope")
+      }
 });
 
 
-    function choosePersonality(newFriend){
-      arr = [];
-      arr.push(newFriend);
-      console.log(arr);
-      var obj = { };
-      for (var i = 0, j = arr.length; i < j; i++) {
-        if (obj[arr[i]]) {
-        obj[arr[i]]++;
-        }
-        else {
-        obj[arr[i]] = 1;
-        } 
-}
+    // function choosePersonality(newFriend){
+    //  event.preventDefault();
+    //   // arr = [];
+    //   // arr.push(newFriend);
+    //   console.log(newFriend);
 
-      console.log(obj);
-    };
+    //   console.log(newFriend.question1);
+    //   console.log(newFriend.question2);
+    //   console.log(newFriend.question3);
+    //   // newFriend.answerTwo
+    //   // newFriend.answerThree
+
+//       switch ("You matched with Ted!") {
+//     case 0:
+//         ;
+//         break;
+//     case 1:
+//         day = "Monday";
+//         break;
+//     case 2:
+//         day = "Tuesday";
+//         break;
+//     case 3:
+//         day = "Wednesday";
+//         break;
+//     case 4:
+//         day = "Thursday";
+//         break;
+//     case 5:
+//         day = "Friday";
+//         break;
+//     case 6:
+//         day = "Saturday";
+// }
+    // };
 
 
 
