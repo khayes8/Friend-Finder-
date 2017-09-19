@@ -45,9 +45,8 @@
         <div class="medium-8 columns">
             <h3><b>Question 1</b></h3>
             <label>
-                <p class = "question1">Do you enjoy traveling alone or with others?</p>
-                <select>
-                <option value="">Select</option>
+                <p>Do you enjoy traveling alone or with others?</p>
+                <select placeholder="Select Product ID Type" id="question1" name="form_product_id_type">
                   <option value="introvert" class = "ans1">Other people? No thank you. I like my peace and quiet.</option>
                   <option value="extrovert" class = "ans2">Whats a party without friends?</option>
                   <option value="extroverted-introvert" class = "ans3">I'll go with other people but prefer to keep to myself.</option>
@@ -140,18 +139,19 @@ if user has exin, ex and ex match to sasha
         var newFriend = {
         name: $(".name").val().trim(),
         imagelink: $(".photo").val().trim(),
-        question1: $(".question1").val().trim(),
-        answer1 : $(".ans1").val().trim()
+        question1: $("#question1").val().trim(),
+        answer1 : $(".ans1").val().trim(),
+        answer2 : $(".ans2").val().trim()
         // question2: $(".question2").val().trim(),
         // question3: $(".question3").val().trim(),
       };
       console.log(newFriend);
       // choosePersonality(newFriend);
-      if(newFriend.answer1 === "introvert"){
+      if(newFriend.question1 === newFriend.answer1){
         console.log("correct answer!")
       }
 
-      else if (newfriend.answer1 === "extrovert"){
+      else if (newFriend.question1 === newFriend.answer2){
         console.log("nope")
       }
 });
