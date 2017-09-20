@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,36 +12,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/js/foundation.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  </head>
-  <body>
-  <div class="callout primary">
-      <!--Row 1-->
-      <div class="row">
-        <div class="medium-8 columns">
-          <h2>Survey Questions</h2>
+</head>
+
+<body>
+    <div class="callout primary">
+        <!--Row 1-->
+        <div class="row">
+            <div class="medium-8 columns">
+                <h2>Survey Questions</h2>
+            </div>
         </div>
-      </div>
-     <!--Row 2-->
-      <div class="row">
-        <div class="medium-8 columns">
-            <h3><b>About You</b></h3>
-            <label>
+        <!--Row 2-->
+        <div class="row">
+            <div class="medium-8 columns">
+                <h3><b>About You</b></h3>
+                <label>
                 <h3>Name (Required)</h3>
                 <textarea placeholder="Name" class="name"></textarea>
             </label>
+            </div>
         </div>
-      </div>
-     <!--Row 3-->
-      <div class="row">
-        <div class="medium-8 columns">
-            <label>
+        <!--Row 3-->
+        <div class="row">
+            <div class="medium-8 columns">
+                <label>
                 <h3>Link to Photo Image (Required)</h3>
                 <textarea placeholder="Photo" class ="photo"></textarea>
             </label>
+            </div>
         </div>
-      </div>
-  </div>
-  <!--Row 4-->
+    </div>
+    <!--Row 4-->
     <div class="row">
         <div class="medium-8 columns">
             <h3><b>Question 1</b></h3>
@@ -48,22 +50,22 @@
                 <p id="q1" value = "q1">Do you enjoy traveling alone or with others?</p>
                 <select>
                   <option value="introvert" class = "a1">Other people? No thank you. I like my peace and quiet.</option>
-                  <option value="extrovert" class = "a1">Whats a party without friends?</option>
-                  <option value="extroverted-introvert" class = "a1">I'll go with other people but prefer to keep to myself.</option>
+                  <option value="extrovert" class = "a2">Whats a party without friends?</option>
+                  <option value="extroverted-introvert" class = "a3">I'll go with other people but prefer to keep to myself.</option>
                 </select>
             </label>
         </div>
     </div>
     <!--Row 5-->
-   <div class="row">
+    <div class="row">
         <div class="medium-8 columns">
             <h3><b>Question 2</b></h3>
             <label>
                 <p id="q2" value = "q2">How would you describe your personality?</p>
                 <select>
-                  <option value="introvert" class = "a2">Three syllabals my friend: In.tro.vert. I prefer to keep to myself and don't like talking to others.</option>
-                  <option value="extrovert" class = "a2">Chatty kathy over here. I love people and making new friends!</option>
-                  <option value="extroverted-introvert" class = "a2">I'm social if I'm with people I enjoy being around.</option>
+                  <option value="introvert" class = "a4">Three syllabals my friend: In.tro.vert. I prefer to keep to myself and don't like talking to others.</option>
+                  <option value="extrovert" class = "a5">Chatty kathy over here. I love people and making new friends!</option>
+                  <option value="extroverted-introvert" class = "a6">I'm social if I'm with people I enjoy being around.</option>
                 </select>
             </label>
         </div>
@@ -75,30 +77,28 @@
             <label>
                 <p id= "q3" value = "q3">How often do you keep in touch with your friends?</p>
                 <select>
-                  <option value="extrovert" class = "a3">I prefer to text back and forth constantly.</option>
-                  <option value="introvert" class = "a3">Friends? What are those. I'm a total loner.</option>
-                  <option value="extroverted-introvert" class = "a3">I text or call if there's a need, but other than that, try not to get too hung up on it.</option>
+                  <option value="extrovert" class = "a7">I prefer to text back and forth constantly.</option>
+                  <option value="introvert" class = "a8">Friends? What are those. I'm a total loner.</option>
+                  <option value="extroverted-introvert" class = "a9">I text or call if there's a need, but other than that, try not to get too hung up on it.</option>
                 </select>
             </label>
         </div>
-    </div>  
-     <div class="row">
-    <div class="medium-4 columns"><a class="button secondary expanded submit" href="">Submit</a></div>
-  </div>
-  <div class="row">
-    <div class="small-2 columns">
-       <button class="hollow button secondary" href="#">Friends List API</button>
     </div>
-    <div class="small-2 columns">
-       <button class="hollow button secondary" href="#">Github Repo</button>
+    <div class="row">
+        <div class="medium-4 columns"><a class="button secondary expanded submit" href="">Submit</a></div>
     </div>
-    <div class="small-8 columns">
+    <div class="row">
+       <div class="small-2 columns">
+            <button class="hollow button secondary"><a href="./data/friends">Friends List API</a></button>
+        </div>
+        <div class="small-2 columns">
+            <button class="hollow button secondary"><a href="https://github.com/khayes8/Friend-Finder-">Github Repo</a></button>
+        </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    $(document).foundation();
+    <script type="text/javascript">
+        $(document).foundation();
 
-    /* 
+        /* 
     possible answers
 
 
@@ -117,50 +117,41 @@ if user has ex, ex, and ex match to sasha
 if user has exin, ex and ex match to sasha
 
     */
+$(".submit").on("click", function(event) {
+    event.preventDefault();
 
-    $(".submit").on("click", function(event) {
-      event.preventDefault();
-
-        var newFriend = {
+    var newFriend = {
         name: $(".name").val().trim(),
         imagelink: $(".photo").val().trim(),
-      };
-
-        var questions = {
-        q1: $("#q1").val().trim(),
-        q2: $("#q2").val().trim(),
-        q3: $("#q3").val().trim(),
-        }
-
-        var answers = {
-        a1:$(".a1").val().trim(),
-        a2:$(".a2").val().trim(),
-        a3:$(".a3").val().trim(),
-        }
-       choosePersonality(questions, answers);
-    });
+        scores: [
+            $('#q1').val().trim(),
+            $('#q2').val().trim(),
+            $('#q3').val().trim(),
+        ]
+    }
+    choosePersonality(newFriend);
+});
 
 
 // });
 
 
-    function choosePersonality(questions, answers){
-     event.preventDefault();
-      arr = [];
-      arr.push(answers.a1, answers.a2, answers.a3);
-      console.log(arr);
+// function choosePersonality(newFriend) {
+//     event.preventDefault();
+  
+//     $.post('/api/friends', userInput)
+//         .done(function(data) {
+//             // Set the name and image values of friend match
+//             // $('#userMatch').html(data.matchName);
+//             // $("#userMatchImage").attr("src", data.matchImage);
+//             // // Pop open the modal dialog
+//             // $('#modal1').modal('open');
+        
+//         });
 
-      var obj = { };
-      for (var i = 0, j = arr.length; i < j; i++) {
-         obj[arr[i]] = (obj[arr[i]] || 0) + 1;
-      }
-      console.log(obj);
-      //missing logic of choosing person to match with
+};
 
-      
-      };
-
-      // if ()
-
-  </script>
-  </body>
+// if ()
+<
+/script> <
+/body>

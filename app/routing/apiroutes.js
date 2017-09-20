@@ -1,21 +1,12 @@
 var friendsData = require("../data/friends.js");
+var express = require("express");
 
-module.exports = function(app){
+var app = express(); 
 
-app.get("/api/friends", function(req, res) {
-    res.json(friendsData);
+module.exports = function(){
+
+app.get("/friends", function(req, res) {
+    res.sendFile(path.join(__dirname, "./data/friends.js"));
   });
 
-app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    if (friendsData.length < 5) {
-      tableData.push(req.body);
-      res.json(true);
-    }
-    else {
-      waitListData.push(req.body);
-      res.json(false);
-    }
-  });
 }
