@@ -13,8 +13,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
  
 //create routes for files
 var func = require("./app/routing/htmlroutes");
+// var funct = require(".app/routing/apiroutes");
 func(app);
-
+// funct(app);
 
 
 app.listen(port, function() {

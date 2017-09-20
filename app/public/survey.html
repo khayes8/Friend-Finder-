@@ -83,7 +83,17 @@
         </div>
     </div>  
      <div class="row">
-    <div class="medium-4 columns"><a class="button secondary expanded submit" href="#">Submit</a></div>
+    <div class="medium-4 columns"><a class="button secondary expanded submit" href="">Submit</a></div>
+  </div>
+  <div class="row">
+    <div class="small-2 columns">
+       <button class="hollow button secondary" href="#">Friends List API</button>
+    </div>
+    <div class="small-2 columns">
+       <button class="hollow button secondary" href="#">Github Repo</button>
+    </div>
+    <div class="small-8 columns">
+    </div>
   </div>
   <script type="text/javascript">
     $(document).foundation();
@@ -126,9 +136,6 @@ if user has exin, ex and ex match to sasha
         a1:$(".a1").val().trim(),
         a2:$(".a2").val().trim(),
         a3:$(".a3").val().trim(),
-        // a4:$(".a4").val().trim(),
-        // a5:$(".a5").val().trim(),
-        // a6:$(".a6").val().trim(),
         }
        choosePersonality(questions, answers);
     });
@@ -147,11 +154,13 @@ if user has exin, ex and ex match to sasha
       for (var i = 0, j = arr.length; i < j; i++) {
          obj[arr[i]] = (obj[arr[i]] || 0) + 1;
       }
-
       console.log(obj);
-          };
+      //missing logic of choosing person to match with
 
+      
+      };
 
+      // if ()
 
   </script>
   </body>
